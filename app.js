@@ -1,5 +1,5 @@
 const screen = document.querySelector('.screen');
-const clear = document.querySelector('.ac');
+const clear = document.getElementById('ac');
 const percentage = document.querySelector('.percentage');
 const nums = document.querySelectorAll('.num');
 const oprs = document.querySelectorAll('.opr');
@@ -24,6 +24,10 @@ nums.forEach(num => {
 
 oprs.forEach(opr => {
   opr.addEventListener('click', (e) => {
+    if(prevNum && currentNum) {
+      calculate(prevNum, currentNum, operator);
+      updateScreen(currentNum);
+    }
     inputOpr(e.target.value);
   })
 })

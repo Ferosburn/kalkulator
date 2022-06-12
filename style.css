@@ -1,8 +1,12 @@
 main {
   text-align: center;
   margin: 0 auto;
-  padding-top: 10vh;
+  margin-top: 10vh;
+  padding-bottom: 7px;
   width: 350px;
+  background-color: rgb(38, 38, 38);
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .screen {
@@ -15,28 +19,41 @@ main {
   border: none;
   padding: 0 20px;
   box-sizing: border-box;
-}
-
-.keys {
-  width: 100%;
+  box-shadow: 0 7px rgb(38, 38, 38);
 }
 
 .row {
   display: flex;
 }
 
+.btn {
+  width: 25%;
+  box-sizing: border-box;
+  position: relative;
+}
+
 button {
-  height: 80px;
+  width: 100%;
+  box-shadow: 0 7px black;
+  height: 70px;
   background-color: gray;
-  border: 1px solid rgb(65, 65, 65);
+  border: 1px solid black;
+  border-radius: 3px;
   font-size: 32px;
   color: white;
-  width: 25%;
   outline: none;
+  box-sizing: border-box;
+}
+
+button:active {
+  position: absolute;
+  top: 7px;
+  left: 0px;
+  box-shadow: none;
 }
 
 button:hover {
-  opacity: 0.8;
+  background-color: rgb(100, 100, 100);
 }
 
 .opr,
@@ -44,11 +61,20 @@ button:hover {
   background-color: rgb(255, 115, 0);
 }
 
+.opr:hover,
+.equal:hover {
+  background-color: rgb(230, 105, 3);
+}
+
 .ac,
 .zero {
   width: 50%;
 }
 
-.ac {
+#ac {
   background-color: rgb(255, 21, 0);
+}
+
+#ac:hover {
+  background-color: rgb(240, 20, 0);
 }
